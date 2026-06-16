@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DREAMS Lab autonomous mapping and active 3D reconstruction research by Carlos Manuel Torre Sada.">
+  <title>DREAMS Lab: Autonomous Mapping | Carlos Manuel Torre Sada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Carlos Manuel Torre Sada</a>
+    <nav aria-label="Project navigation">
+      <a href="sae-aero-design.html">SAE Aero Design</a>
+      <a href="horizontec.html">HorizonTec</a>
+      <a href="other-projects.html">Other Projects</a>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <section class="project-hero project-hero--mapping">
+      <p class="eyebrow">DREAMS Laboratory · Arizona State University</p>
+      <h1>Autonomous Terrain Mapping and Exploration</h1>
+      <p>Simulation, next-best-view planning, and 3D reconstruction workflows for autonomous robotic mapping.</p>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel panel--wide">
+        <h2>Research Context</h2>
+        <p>At ASU's DREAMS Laboratory, my work focuses on autonomous mapping, simulation, and 3D reconstruction workflows. The research connects robotic viewpoint planning with digital-twin construction, using an RGB UAV in simulation to decide which camera views best improve reconstruction quality.</p>
+        <p>The submitted work, "Hybrid Sparse-Model Next-Best-View Planning for Active 3D Reconstruction for Digital Twins," plans directly from an incrementally updated Structure-from-Motion sparse point cloud rather than relying on a dense mesh, voxel map, or learned scene representation during flight.</p>
+      </article>
+      <aside class="panel">
+        <h2>Research Stack</h2>
+        <ul class="tag-list">
+          <li>Python automation</li>
+          <li>ROS2</li>
+          <li>PX4</li>
+          <li>Gazebo</li>
+          <li>COLMAP</li>
+          <li>Photogrammetry</li>
+          <li>3D Gaussian Splatting</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="detail-band">
+      <div>
+        <h2>Pipeline</h2>
+        <p>The mission begins with a structured seed image capture around the target. After an initial reconstruction, candidate viewpoints are generated, filtered, scored, and selected based on the current sparse model.</p>
+      </div>
+      <div>
+        <h2>Planning Strategies</h2>
+        <p>The research compares co-visibility, baseline-aware repair, and hybrid next-best-view strategies that balance reconstruction improvement with viewpoint diversity, travel distance, and redundant observations.</p>
+      </div>
+    </section>
+
+    <section class="panel results-panel">
+      <h2>Results Highlight</h2>
+      <p>The best-performing oracle hybrid strategy achieved strong reconstruction fidelity on a simulated lunar rock task, including a 59.8 mm mean cloud-to-cloud error, 80% completeness at an 80 mm threshold, and 89% F-score at an 80 mm threshold.</p>
+    </section>
+  </main>
+</body>
+</html>
