@@ -141,6 +141,16 @@ p {
   background: rgba(199, 122, 63, 0.18);
 }
 
+.icon-link--small {
+  width: 42px;
+  height: 42px;
+}
+
+.icon-link--small svg {
+  width: 21px;
+  height: 21px;
+}
+
 .email-link {
   color: var(--text);
   text-decoration: none;
@@ -149,6 +159,32 @@ p {
 
 .email-link:hover {
   color: var(--copper-light);
+}
+
+.resume-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume-link {
+  display: inline-grid;
+  place-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid rgba(242, 239, 232, 0.2);
+  border-radius: var(--radius);
+  color: var(--text);
+  background: rgba(13, 23, 32, 0.58);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.resume-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(226, 161, 95, 0.75);
+  background: rgba(199, 122, 63, 0.18);
 }
 
 .project-nav {
@@ -440,6 +476,11 @@ p {
   .email-link {
     width: 100%;
   }
+
+  .resume-actions {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -458,7 +499,8 @@ p {
 
   .ripple-button:hover,
   .ripple-button:focus-visible,
-  .icon-link:hover {
+  .icon-link:hover,
+  .resume-link:hover {
     transform: none;
   }
 
