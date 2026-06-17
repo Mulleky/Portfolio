@@ -161,6 +161,16 @@ p {
   color: var(--copper-light);
 }
 
+.text-link {
+  color: var(--copper-light);
+  text-decoration-color: rgba(226, 161, 95, 0.52);
+  text-underline-offset: 3px;
+}
+
+.text-link:hover {
+  color: var(--text);
+}
+
 .resume-actions {
   display: inline-flex;
   align-items: center;
@@ -185,6 +195,34 @@ p {
   transform: translateY(-2px);
   border-color: rgba(226, 161, 95, 0.75);
   background: rgba(199, 122, 63, 0.18);
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: 10px;
+  padding: 0 16px;
+  border: 1px solid rgba(226, 161, 95, 0.46);
+  border-radius: var(--radius);
+  color: var(--text);
+  background: rgba(199, 122, 63, 0.16);
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.download-button svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(226, 161, 95, 0.82);
+  background: rgba(199, 122, 63, 0.28);
 }
 
 .project-nav {
@@ -557,7 +595,8 @@ p {
   .ripple-button:hover,
   .ripple-button:focus-visible,
   .icon-link:hover,
-  .resume-link:hover {
+  .resume-link:hover,
+  .download-button:hover {
     transform: none;
   }
 
