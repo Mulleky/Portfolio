@@ -403,6 +403,15 @@ p {
     #142433;
 }
 
+.project-hero--papers {
+  background:
+    linear-gradient(135deg, rgba(13, 23, 32, 0.88), rgba(13, 23, 32, 0.36)),
+    repeating-linear-gradient(90deg, rgba(110, 167, 160, 0.12) 0 1px, transparent 1px 34px),
+    radial-gradient(circle at 74% 24%, rgba(199, 122, 63, 0.36), transparent 18rem),
+    radial-gradient(circle at 18% 70%, rgba(110, 167, 160, 0.24), transparent 18rem),
+    #102230;
+}
+
 .media-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -509,6 +518,31 @@ p {
   border-color: rgba(226, 161, 95, 0.36);
 }
 
+.papers-list {
+  display: grid;
+  gap: 16px;
+}
+
+.paper-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  padding: clamp(20px, 4vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.18);
+}
+
+.paper-row h2 {
+  font-size: clamp(1.05rem, 2.2vw, 1.42rem);
+}
+
+.paper-row p {
+  margin: 10px 0 0;
+}
+
 .project-list {
   display: grid;
   gap: 22px;
@@ -543,6 +577,14 @@ p {
 
   .project-hero {
     min-height: 300px;
+  }
+
+  .paper-row {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-row .download-button {
+    justify-self: start;
   }
 
   .media-card {
