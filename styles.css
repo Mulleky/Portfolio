@@ -225,6 +225,13 @@ p {
   background: rgba(199, 122, 63, 0.28);
 }
 
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
 .project-nav {
   display: grid;
   gap: 14px;
@@ -583,7 +590,7 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .paper-row .download-button {
+  .paper-row .download-actions {
     justify-self: start;
   }
 
